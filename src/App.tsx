@@ -1,5 +1,5 @@
 import { useAtom } from 'jotai'
-import React, { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { dataAtom, deleteItemAtom } from './store/Jotai'
 import { dataZustand } from './store/Zustand'
 import { useDispatch, useSelector } from 'react-redux'
@@ -10,7 +10,7 @@ import EditModal from './components/EditModal'
 const App = () => {
   const [dataA] = useAtom(dataAtom)
   const { dataZ, deleteUserZ } = dataZustand()
-  const { dataR } = useSelector(store => store.dataSlice)
+  const { dataR } = useSelector((store:any) => store.dataSlice)
 
   const [, deleteA] = useAtom(deleteItemAtom)
   const dispatch = useDispatch()

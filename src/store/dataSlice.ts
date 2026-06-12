@@ -13,6 +13,7 @@ export interface data{
 
 }
 
+
 export const initialState:data={
     dataR:[
         {
@@ -51,8 +52,6 @@ export const dataSlice = createSlice({
             status:el.status
         }:el)
     }
-    
-    
   }
 })
 
