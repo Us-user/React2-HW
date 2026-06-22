@@ -38,6 +38,23 @@ export const deleteData=createAsyncThunk('dataSlice/deleteData', async(id)=>{
     }
 })
 
+export const addData=createAsyncThunk('dataSlice/addData', async(item)=>{
+    try {
+        let {data}=await axios.post(api, item)
+
+    } catch (error) {
+        console.log(error);
+    }
+})
+
+export const upData=createAsyncThunk('dataSlice/upData', async(item)=>{
+    try {
+        let {data}=await axios.put(api,item)
+    } catch (error) {
+        console.log(error);
+    }
+})
+
 export const dataSlice = createSlice({
     name: 'dataSlice',
     initialState,
