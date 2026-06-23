@@ -23,5 +23,4 @@ export const deleteDataItem=atom(null,async(get,set,id)=>{
     } catch (error) {
         console.log(error);
     }
-
 })
